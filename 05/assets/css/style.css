@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik&display=swap");
+
+:root {
+	font-size: 62.5%;
+	--font-family: "Rubik", sans-serif;
+	--color-expression: rgba(107, 107, 107, 1);
+	--bg-color-gradient-primary: linear-gradient(
+		180deg,
+		#807ece 0%,
+		#8e7ece 100%
+	);
+	--bg-color-gradient-secondary: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.05) 0.01%,
+			rgba(255, 255, 255, 0.05) 100%
+		),
+		#462878;
+	--bg-color-gradient-tertiary: linear-gradient(
+			180deg,
+			rgba(0, 0, 0, 0.15) 0%,
+			rgba(255, 255, 255, 0.05) 100%
+		),
+		#7f45e2;
+	--bg-color-primary: rgba(45, 42, 55, 1);
+	--bg-color-secondary: rgba(151, 93, 250, 1);
+	--bg-color-tertiary: rgba(70, 40, 120, 1);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: var(--font-family);
+	--webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background: var(--bg-color-gradient-primary);
+	width: 100vw;
+	height: 100vh;
+}
+
+.container {
+	width: 100%;
+	height: 100vh;
+	display: grid;
+	place-items: center;
+}
+
+#calculator {
+	width: 35.6rem;
+	height: 56.6rem;
+	padding: 3.5rem 3.2rem 3.2rem 3.2rem;
+	background: var(--bg-color-primary);
+	border-radius: 4.8rem;
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+		0px 188px 52px rgba(0, 0, 0, 0.01), 0px 120px 48px rgba(0, 0, 0, 0.04),
+		0px 68px 41px rgba(0, 0, 0, 0.15), 0px 30px 30px rgba(0, 0, 0, 0.26),
+		0px 8px 17px rgba(0, 0, 0, 0.29), inset 0px 6px 8px rgba(255, 255, 255, 0.1),
+		inset 0px -4px 5px rgba(0, 0, 0, 0.22);
+}
+
+#display {
+	width: 28.8rem;
+	height: 9rem;
+	padding: 0 2.2rem 0 1.8rem;
+	margin: 0 0 2.6rem 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.expression {
+	width: 24.5rem;
+	height: 4.3rem;
+	text-align: end;
+	font-size: 2rem;
+	color: var(--color-expression);
+	word-wrap: break-word;
+	overflow-wrap: break-word;
+}
+
+.result span:first-child {
+	color: var(--color-expression);
+}
+
+.result {
+	height: 5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	font-size: 3.6rem;
+	color: rgba(235, 235, 235, 1);
+}
+
+#keyboard {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(5, 1fr);
+	place-content: center;
+	gap: 1.2rem;
+}
+
+#keyboard button {
+	width: 6.4rem;
+	height: 6.4rem;
+	border: none;
+	border-radius: 50%;
+	font-size: 2.4rem;
+	font-weight: 400;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+.default {
+	background: var(--bg-color-primary);
+	box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04),
+		0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26),
+		0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.06);
+	color: rgba(235, 235, 235, 1);
+}
+
+.clear-error {
+	color: var(--bg-color-secondary);
+}
+
+.operator {
+	box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04),
+		0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26),
+		0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+	background: var(--bg-color-tertiary);
+}
+
+.percent svg,
+.divider svg,
+.multiply svg,
+.minus svg,
+.plus svg,
+.plusminus svg,
+.equal svg {
+	width: 2.5rem;
+	fill: rgba(235, 235, 235, 1);
+	transform: translateY(0.3rem);
+	pointer-events: none;
+}
+
+.equal {
+	background: var(--bg-color-gradient-tertiary);
+	box-shadow: 0px 11px 7px rgba(0, 0, 0, 0.01), 0px 7px 7px rgba(0, 0, 0, 0.04),
+		0px 4px 6px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.26),
+		0px 0px 2px rgba(0, 0, 0, 0.29), inset 0px 2px 3px rgba(255, 255, 255, 0.1);
+}

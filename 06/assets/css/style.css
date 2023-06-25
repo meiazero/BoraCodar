@@ -1,0 +1,187 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	--webkit-font-smoothing: antialiased;
+	--moz-osx-font-smoothing: grayscale;
+	font-family: "Rubik", sans-serif;
+}
+
+:root {
+	font-size: 62.5%;
+}
+
+body {
+	width: 100vw;
+	height: 100vh;
+	background: linear-gradient(168deg, #8257e5 0%, #271a45 100%);
+	color: rgba(255, 255, 255, 1);
+	display: grid;
+	place-content: center;
+}
+
+#ticketContainer h1 {
+	text-align: center;
+	margin: 0 0 2rem 0;
+}
+
+#ticketContainer > p:last-child {
+	width: 26.9rem;
+	transform: translateX(3rem);
+	text-align: center;
+	font-size: 1.4rem;
+	opacity: 0.64;
+}
+
+#ticket {
+	width: 32.7rem;
+	height: 54.4rem;
+	filter: drop-shadow(0px 4px 24px rgba(0, 0, 0, 0.25));
+	color: rgba(0, 0, 0, 1);
+	margin: 0 auto 2rem auto;
+	border-radius: 2.4rem;
+}
+
+.warning {
+	text-align: center;
+	color: rgba(0, 0, 0, 0.8);
+	font-size: 1.6rem;
+	background: rgba(255, 255, 255, 1);
+	border-radius: 0 0 2.4rem 2.4rem;
+	padding: 0 0 2.4rem 0;
+}
+
+.warning span {
+	font-weight: 500;
+}
+
+#flightInfos,
+#passengerInfos {
+	border-bottom: 0.1rem dashed rgba(0, 0, 0, 0.32);
+	border-radius: 2.4rem;
+}
+
+#boardingInfos {
+	border-radius: 2.4rem 2.4rem 0 0;
+}
+
+#flightInfos,
+#passengerInfos,
+#boardingInfos {
+	padding: 2.4rem 3.2rem;
+	background: rgba(255, 255, 255, 1);
+}
+
+#flightInfos {
+	display: flex;
+	flex-flow: column;
+}
+
+#dateTimeFlight,
+#travelInfos,
+#passengerInfos,
+#boardingInfos {
+	display: flex;
+	flex-flow: row;
+	align-items: center;
+	justify-content: space-between;
+}
+
+#dateTimeFlight {
+	margin: 0 0 2.4rem 0;
+}
+
+.airplane {
+	width: 2.4rem;
+	height: 2.4rem;
+	margin: 0 auto;
+	transform: translateX(0.5rem);
+}
+
+.timeFlight p:first-child,
+.dateFlight p:first-child,
+.from p:first-child,
+.destine p:first-child,
+.namePassenger p:first-child,
+.seat p:first-child,
+.boardingTime p:first-child,
+.terminal p:first-child,
+.gate p:first-child,
+.qrcode p {
+	font-size: 1.4rem;
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0.64);
+	letter-spacing: -0.02em;
+	line-height: 1.7rem;
+}
+
+.namePassenger p:last-child,
+.seat p:last-child,
+.boardingTime p:last-child,
+.terminal p:last-child,
+.gate p:last-child {
+	font-weight: 500;
+}
+
+.destine p:last-child span {
+	font-size: 1rem;
+	position: relative;
+	top: -0.6rem;
+	left: -0.3rem;
+}
+
+.dateFlight,
+.destine,
+.seat {
+	text-align: end;
+}
+
+.timeFlight,
+.dateFlight,
+.from,
+.destine,
+.namePassenger,
+.seat,
+.boardingTime,
+.terminal,
+.gate {
+	font-size: 1.6rem;
+	color: rgba(0, 0, 0, 0.8);
+}
+
+.boardingTime p:last-child {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 0.4rem 0.8rem;
+	border-radius: 0.8rem;
+	background: rgba(99, 59, 188, 1);
+	color: rgba(255, 255, 255, 1);
+}
+
+.boardingTime p:first-child,
+.terminal p:first-child,
+.gate p:first-child {
+	margin: 0 0 0.2rem 0;
+}
+
+.qrcode img {
+	width: 16rem;
+	height: auto;
+}
+
+.qrcode p {
+	text-align: center;
+	font-size: 1.4rem;
+}
+
+.terminal {
+	margin: 1.6rem 0;
+}
+
+.airport {
+	font-size: 4rem;
+	font-weight: 500;
+}
